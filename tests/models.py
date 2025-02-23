@@ -3,7 +3,7 @@ from django.db import models
 
 class Subject(models.Model):
     name = models.CharField(max_length=255)
-    image = models.ImageField(upload_to='subjects/')
+    image = models.ImageField(upload_to='subjects/', default='default.jpg')
     grade = models.PositiveSmallIntegerField()
 
     def __str__(self):
